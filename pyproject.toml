@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "figuro"
+version = "0.1.0"
+description = "FiGuRO: Flexible Intrinsic Guided Rank Optimization for adaptive rank reduction."
+readme = "README.md"
+requires-python = ">=3.9"
+authors = [
+    { name = "FiGuRO Contributors" }
+]
+dependencies = [
+    "torch>=2.0,<3.0"
+]
+
+[project.optional-dependencies]
+examples = [
+    "numpy>=1.23,<3.0",
+    "matplotlib>=3.6,<4.0",
+    "scikit-learn>=1.2,<2.0",
+    "tqdm>=4.64,<5.0"
+]
+dev = [
+    "pytest>=7,<9",
+    "black>=24,<26",
+    "ruff>=0.6,<1.0",
+    "ipykernel>=6,<7"
+]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = ["figuro"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["functions*"]

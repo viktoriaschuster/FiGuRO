@@ -1,0 +1,3 @@
+# Minimal dependency set for core FiGuRO usage.
+# Install with: pip install -r requirements.txt
+torch>=2.0,<3.0
